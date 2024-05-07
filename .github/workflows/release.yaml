@@ -1,0 +1,35 @@
+---
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  Release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+
+      - name: Install Semantic Release
+        run: |
+          npm install @semantic-release/git -D
+          npm install @semantic-release/changelog -D
+
+      - name: Run Semantic Release
+        run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.DEMO_DEVOPS_AWS_RELEASE }}
