@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.1.0...v1.1.1) (2024-05-07)
+
+
+### Bug Fixes
+
+* context parameter in cdk deployment ([#4](https://github.com/lemiliomoreno/demo-devops-aws/issues/4)) ([5ff7367](https://github.com/lemiliomoreno/demo-devops-aws/commit/5ff73671b0336cc77568ddd2b3d8bd45d84cfd73))
+
 # [1.1.0](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.0.0...v1.1.0) (2024-05-07)
 
 
