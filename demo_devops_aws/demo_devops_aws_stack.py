@@ -8,17 +8,15 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-class DemoDevopsAwsStack(Stack):
 
+class DemoDevopsAwsStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         docker_tag = self.node.try_get_context("docker_tag")
         mongodb_uri = self.node.try_get_context("mongodb_uri")
 
-        vpc = ec2.Vpc.from_lookup(self, "VPC",
-            is_default=True
-        )
+        vpc = ec2.Vpc.from_lookup(self, "VPC", is_default=True)
 
         cluster = ecs.Cluster(
             self,
@@ -47,6 +45,7 @@ class DemoDevopsAwsStack(Stack):
         fargate_cluster = ecs_patterns.ApplicationLoadBalancedFargateService(
             self,
             "FargateService",
+            assign_public_ip=True,
             cluster=cluster,
             memory_limit_mib=1024,
             cpu=512,
@@ -60,6 +59,4 @@ class DemoDevopsAwsStack(Stack):
             ),
         )
 
-        fargate_cluster.target_group.configure_health_check(
-            path="/healthcheck"
-        )
+        fargate_cluster.target_group.configure_health_check(path="/healthcheck")
