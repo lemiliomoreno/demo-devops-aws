@@ -1,0 +1,35 @@
+---
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Flake8
+        working-directory: src
+        run: |
+          pip install flake8
+          flake8 .
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        working-directory: src
+        run: |
+          docker build -t latest .
