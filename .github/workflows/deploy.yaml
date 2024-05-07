@@ -58,4 +58,4 @@ jobs:
           npm install -g aws-cdk
           pip install --upgrade pip
           pip install -r requirements.txt
-          cdk deploy -c docker_tag=${{ steps.latest_tag.outputs.tag }} -c database_uri='${{ secrets.DATABASE_URI }}' --require-approval never
+          cdk deploy -c docker_tag=${{ steps.latest_tag.outputs.tag }} -c mongodb_uri='${{ secrets.DATABASE_URI }}' --require-approval never
