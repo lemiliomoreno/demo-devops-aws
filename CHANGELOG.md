@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.1.2...v1.1.3) (2024-05-07)
+
+
+### Bug Fixes
+
+* database name in connection ([#6](https://github.com/lemiliomoreno/demo-devops-aws/issues/6)) ([31b44ae](https://github.com/lemiliomoreno/demo-devops-aws/commit/31b44ae9d48cd905fffc3889bb2e6f11acd83279))
+
 ## [1.1.2](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.1.1...v1.1.2) (2024-05-07)
 
 
