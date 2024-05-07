@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.1.1...v1.1.2) (2024-05-07)
+
+
+### Bug Fixes
+
+* assign public ip to fargate service ([#5](https://github.com/lemiliomoreno/demo-devops-aws/issues/5)) ([faa1012](https://github.com/lemiliomoreno/demo-devops-aws/commit/faa10126c31297e7b913102bd5b70603f72ed5a3))
+
 ## [1.1.1](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.1.0...v1.1.1) (2024-05-07)
 
 
