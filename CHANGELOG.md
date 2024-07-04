@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.2.1...v1.3.0) (2024-07-04)
+
+
+### Features
+
+* change healthcheck ([#9](https://github.com/lemiliomoreno/demo-devops-aws/issues/9)) ([ff6bb4c](https://github.com/lemiliomoreno/demo-devops-aws/commit/ff6bb4c22f120ea599ea190758766e0a4af6f977))
+
 ## [1.2.1](https://github.com/lemiliomoreno/demo-devops-aws/compare/v1.2.0...v1.2.1) (2024-05-08)
 
 
