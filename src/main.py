@@ -27,4 +27,4 @@ app.add_exception_handler(Forbidden, forbidden_exception_handler)
 
 @app.get("/healthcheck", tags=["healthcheck"])
 async def healthcheck():
-    return {"healthcheck": "health status is good"}
+    return {"healthcheck": "ok"}
